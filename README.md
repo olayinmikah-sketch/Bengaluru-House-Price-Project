@@ -1,18 +1,20 @@
-# Bengaluru House Price Prediction & Feature Engineering
+# Bengaluru House Price Predictor
 
-## Project Overview
-This project focuses on building an end-to-end data cleaning and feature engineering pipeline to predict housing prices in Bengaluru, India. Using a dataset with structural anomalies and missing values, I utilized Python to clean, transform, and optimize features for predictive modeling.
+Predicts residential property prices in Bengaluru using Linear Regression.
 
-## Technical Skills Demonstrated
-* **Data Cleaning:** Handled structural text anomalies, converted mixed-format strings (e.g., "2 BHK" to numeric integers), and imputed missing data.
-* **Feature Engineering:** Outlier detection and removal using business logic (e.g., price per square foot anomalies) and statistical thresholds.
-* **Tools Used:** Python, Pandas, NumPy, Matplotlib, Seaborn.
+## Results
+- R² Score (test set): 0.84
+- Cross-validated mean R² (5-fold): 0.82
 
-## Key Insights & Results
-* Successfully reduced dataset noise by removing extreme outliers, increasing potential model stability.
-* Discovered a strong linear correlation between square footage and total price after applying custom data transformations.
+## Tech Stack
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
 
-## How to Run the Code
-1. Clone this repository.
-2. Install dependencies: `pip install pandas numpy matplotlib seaborn`
-3. Open and run the `bengaluru_house_prices.ipynb` notebook.
+## Project Steps
+1. Data cleaning — handled missing values, parsed non-standard sqft formats
+2. Feature engineering — price-per-sqft, BHK extraction, location encoding
+3. Outlier removal — statistical and domain-aware methods
+4. Model training — Linear Regression with GridSearchCV comparison
+5. Model export — saved as pickle file for deployment
+
+## Dataset
+Bengaluru House Price dataset (13,000+ listings)
